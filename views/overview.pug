@@ -1,0 +1,17 @@
+extends base
+
+block content
+
+ maim.main 
+  .card-container 
+   each movie in movies
+    .card
+     a(href=`/movie/${movie.slug}`)
+      .card__header
+       .card__picture
+        .card__picture-overlay &nbsp;
+        
+          img.card__picture-img(src=`/img/movies/${movie.poster}`, alt=`${movie.title}`)
+         
+     
+      
